@@ -30,4 +30,13 @@ abstract class MypayblePlatform extends PlatformInterface {
   Future<String?> initiateSdk() {
     throw UnimplementedError('this has not been implemented');
   }
+
+  Future<dynamic?> initiateKeyAndDetailsDownload(String terminalId) {
+    throw UnimplementedError("initiateKey download has not been implemented");
+  }
+
+  Future<dynamic?> initiatePurchase(Map<String, dynamic> terminalInfo,
+      Map<String, dynamic> transactionInfo, String AccountType, String iccData) {
+    throw UnimplementedError("initiate purchase has not been implemented");
+  }
 }

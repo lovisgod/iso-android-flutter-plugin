@@ -6,6 +6,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 
     dependencies {
@@ -18,6 +19,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -48,4 +50,64 @@ android {
 
 dependencies {
     implementation project(':upstreamSdk')
+//    // retrofit xml converter
+//    // retrofit xml converter
+//    api("com.squareup.retrofit2:converter-simplexml:$retrofit_version") {
+//        exclude group: 'stax', module: 'stax-api'
+//        exclude group: 'stax', module: 'stax'
+//    }
+
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.10"
+
+    // retrofit
+
+    // retrofit http library
+//    api "com.squareup.retrofit2:retrofit:$retrofit_version"
+//    api "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+//
+//    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    // retrofit gson converter
+//    api "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // dependencies injections libraries
+//    api "org.koin:koin-core:$koin_version"
+//    api "org.koin:koin-android-viewmodel:$koin_version"
+
+    // kotlin coroutine libs
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+
+    // architecture lifecycle components
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+
+    implementation 'com.pixplicity.easyprefs:EasyPrefs:1.10.0'
+
+//    implementation 'com.github.devicesandtokens:ISW_EMV_UTIL_LIB:0.1'
+
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
+
+//    // Room components
+//    implementation "androidx.room:room-ktx:2.4.2"
+//    kapt "androidx.room:room-compiler:2.4.2"
+//    androidTestImplementation "androidx.room:room-testing:2.4.2"
+
+
+    // kotlin optional lib
+//    implementation "com.gojuno.koptional:koptional:1.6.0"
+
+    // zing
+    implementation "com.google.zxing:core:3.3.0"
+
+    // sentry
+//    implementation 'io.sentry:sentry-android:6.5.0'
+
+    // picasso
+//    implementation('com.squareup.picasso:picasso:2.71828') {
+//        exclude group: "com.android.support"
+//    }
 }

@@ -21,4 +21,24 @@ class MethodChannelMypayble extends MypayblePlatform {
     return result;
   }
 
+  @override
+  Future<dynamic?> initiateKeyAndDetailsDownload(String terminalId) async {
+    final result = await methodChannel.invokeMethod("initiateKeyAndDetailsDownload", {
+      'terminalId': terminalId
+    });
+    return result;
+  }
+  
+  @override
+  Future<dynamic?> initiatePurchase(Map<String, dynamic> terminalInfo,
+      Map<String, dynamic> transactionInfo, String AccountType, String iccData) async {
+    final result = await methodChannel.invokeMethod("initiatePurchase", {
+      'terminalInfoMap': terminalInfo,
+      'transactionInfo': transactionInfo,
+      'accountType': AccountType,
+      'iccData': iccData
+    });
+    return result;
+  }
+
 }

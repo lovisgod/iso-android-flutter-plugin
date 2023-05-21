@@ -13,8 +13,18 @@ class MockMypayblePlatform
 
   @override
   Future<String?> initiateSdk() {
-    // TODO: implement initiateSdk
     return Future.value('success');
+  }
+
+  @override
+  Future<String?> initiateKeyAndDetailsDownload(String terminalId) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future initiatePurchase(Map<String, dynamic> terminalInfo,
+      Map<String, dynamic> transactionInfo, String AccountType, String iccData) {
+    throw UnimplementedError();
   }
 }
 
